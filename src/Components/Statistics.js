@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useContext, PureComponent } from "react";
+import { QuizContext } from "../Layout/Main";
+import {
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 
 const Statistics = () => {
+  const statData = useContext(QuizContext);
+  const stat = statData.quizJson.data;
+  // const { id, total, name } = stat;
+  console.log(stat);
   return (
     <div>
       <div className="relative bg-deep-purple-accent-400">
@@ -43,6 +59,21 @@ const Statistics = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className="mx-0 md:mx-auto w-full md:w-1/3 my-20">
+        <BarChart width={400} height={400} data={stat} className="mx-auto">
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Bar dataKey="total">
+            {stat.map((index) => (
+              <Cell cursor="pointer" fill={"#651FFF"} key={`cell-${index}`} />
+            ))}
+          </Bar>
+        </BarChart>
+        <h1 className="text-2xl font-semibold text-center my-5">
+          {" "}
+          Number of Questions Per Quiz Test
+        </h1>
       </div>
     </div>
   );
