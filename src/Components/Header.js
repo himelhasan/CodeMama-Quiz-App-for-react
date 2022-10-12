@@ -41,12 +41,12 @@ export const Header = () => {
         </ul>
         <NavLink
           to="/"
-          aria-label="Company"
-          title="Company"
+          aria-label="codeMAMA"
+          title="codeMAMA"
           className="inline-flex items-center lg:mx-auto"
         >
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-            Company
+            codeMAMA
           </span>
         </NavLink>
         <ul className="flex items-center hidden ml-auto space-x-8 lg:flex">
@@ -100,8 +100,8 @@ export const Header = () => {
                   <div>
                     <NavLink
                       to="/"
-                      aria-label="Company"
-                      title="Company"
+                      aria-label="codeMAMA"
+                      title="codeMAMA"
                       className="inline-flex items-center"
                     >
                       <svg
@@ -120,7 +120,7 @@ export const Header = () => {
                         <rect x="14" y="11" width="7" height="12" />
                       </svg>
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        Company
+                        codeMAMA
                       </span>
                     </NavLink>
                   </div>

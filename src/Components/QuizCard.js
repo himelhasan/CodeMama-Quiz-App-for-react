@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import QuizOption from "./QuizOption";
 
-const QuizCard = ({ quizSingle, correctAns, setCorrectAns }) => {
+const QuizCard = ({ quizSingle, correctAns, setCorrectAns, setWrong, wrong }) => {
   const { correctAnswer, options, question } = quizSingle;
 
   const [isVisible, setIsVisible] = useState(true);
   const answerHandler = (e) => {
     if (e.target.outerText === correctAnswer) {
       toast.success("Correct Answer!");
-
       setCorrectAns(correctAns + 1);
     } else {
+      setWrong(wrong + 1);
       toast.error("Wrong Answer");
     }
   };

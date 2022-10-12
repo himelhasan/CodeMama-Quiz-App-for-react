@@ -17,7 +17,7 @@ export const Footer = () => {
             <a
               href="/"
               aria-label="Go home"
-              title="Company"
+              title="codeMAMA"
               className="inline-flex items-center"
             >
               <svg
@@ -36,7 +36,7 @@ export const Footer = () => {
                 <rect x="14" y="11" width="7" height="12" />
               </svg>
               <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-                Company
+                codeMAMA
               </span>
             </a>
             <div className="mt-4 lg:max-w-sm">

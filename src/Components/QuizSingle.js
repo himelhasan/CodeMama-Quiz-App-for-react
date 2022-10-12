@@ -8,6 +8,7 @@ const QuizSingle = () => {
   const { id, logo, name } = quizData.data;
   const quizQuestions = quizData.data.questions;
   const [correctAns, setCorrectAns] = useState(0);
+  const [wrong, setWrong] = useState(0);
 
   return (
     <div>
@@ -106,7 +107,7 @@ const QuizSingle = () => {
             <div className="w-56 h-1 transition duration-300 transform bg-gray-300 rounded-full group-hover:bg-deep-purple-accent-400 group-hover:scale-110 sm:h-auto sm:w-1" />
             <div className="px-12 py-8 text-center">
               <h6 className="text-4xl font-bold text-deep-purple-accent-400 sm:text-5xl">
-                106.5K
+                {wrong}
               </h6>
               <p className="text-center md:text-base">Wrong Answer</p>
             </div>
@@ -122,6 +123,8 @@ const QuizSingle = () => {
             quizSingle={quizSingle}
             correctAns={correctAns}
             setCorrectAns={setCorrectAns}
+            setWrong={setWrong}
+            wrong={wrong}
             // answerHandler={answerHandler}
           ></QuizCard>
         ))}
