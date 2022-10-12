@@ -3,18 +3,18 @@ import toast from "react-hot-toast";
 import QuizOption from "./QuizOption";
 
 const QuizCard = ({ quizSingle, correctAns, setCorrectAns, setWrong, wrong }) => {
-  const { correctAnswer, options, question } = quizSingle;
+  const { id, correctAnswer, options, question } = quizSingle;
   // console.log("correctAnswer", correctAnswer);
   const [isVisible, setIsVisible] = useState(true);
-  const answerHandler = (event) => {
-    if (event.currentTarget.innerText.toLowerCase() == correctAnswer.toLowerCase()) {
-      console.log(event.currentTarget.innerText);
+  const answerHandler = (event, option) => {
+    if (option === correctAnswer) {
+      console.log(event);
       console.log(correctAnswer);
       toast.success("Correct Answer!");
       setCorrectAns(correctAns + 1);
     } else {
-      console.log(event.currentTarget.innerText);
-      console.log(correctAnswer.toLowerCase());
+      console.log(event);
+      console.log(correctAnswer);
       setWrong(wrong + 1);
       toast.error("Wrong Answer");
     }
@@ -50,16 +50,25 @@ const QuizCard = ({ quizSingle, correctAns, setCorrectAns, setWrong, wrong }) =>
       </div>
       <div>
         {options.map((option) => (
-          <QuizOption
-            option={option}
-            answerHandler={answerHandler}
-            key={option.index}
-            correctAns={correctAns}
-            setCorrectAns={setCorrectAns}
-            // isRight={isRight}
+          <p
+            onClick={(e) => {
+              answerHandler(e.target.innerText, option);
+            }}
+            className={`w-full flex items-center text-left pl-4 rounded border border-gray-200 bg-white px-5 py-3 rounded-lg dark:border-gray-700 my-2 `}
           >
-            {" "}
-          </QuizOption>
+            {option}
+          </p>
+
+          // <QuizOption
+          //   option={option}
+          //   answerHandler={answerHandler}
+          //   key={option.index}
+          //   correctAns={correctAns}
+          //   setCorrectAns={setCorrectAns}
+          //   // isRight={isRight}
+          // >
+          //   {" "}
+          // </QuizOption>
         ))}
       </div>
       <div>
