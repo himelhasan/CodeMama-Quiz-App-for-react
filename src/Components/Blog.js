@@ -45,7 +45,7 @@ const Blog = () => {
         </div>
       </div>
 
-      <div class="space-y-4 w-2/4 m-auto my-10">
+      <div class="space-y-4 w-full px-2 md:w-2/4 m-auto my-10">
         <details class="group" open>
           <summary class="flex cursor-pointer items-center justify-between rounded-lg bg-gray-50 p-4">
             <h5 class="font-medium text-gray-900">
