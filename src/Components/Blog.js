@@ -3,7 +3,7 @@ import React from "react";
 const Blog = () => {
   return (
     <div>
-      <div className="relative bg-deep-purple-accent-400">
+      <div className="relative bg-deep-purple-accent-400 ">
         <div className="absolute inset-x-0 bottom-0">
           <svg
             viewBox="0 0 224 12"
@@ -45,10 +45,12 @@ const Blog = () => {
         </div>
       </div>
 
-      <div class="space-y-4">
+      <div class="space-y-4 w-2/4 m-auto my-10">
         <details class="group" open>
           <summary class="flex cursor-pointer items-center justify-between rounded-lg bg-gray-50 p-4">
-            <h5 class="font-medium text-gray-900">Question 1</h5>
+            <h5 class="font-medium text-gray-900">
+              What is the purpose of react router?
+            </h5>
 
             <svg
               class="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180"
@@ -66,12 +68,20 @@ const Blog = () => {
             </svg>
           </summary>
 
-          <p class="mt-4 px-4 leading-relaxed text-gray-700">answer 1</p>
+          <p class="mt-4 px-4 leading-relaxed text-gray-700">
+            React Router is a standard library for routing in React. It enables the
+            navigation among views of various components in a React Application, allows
+            changing the browser URL, and keeps the UI in sync with the URL. ReactJS
+            Router is mainly used for developing Single Page Web Applications. React
+            Router is used to define multiple routes in the application. When a user types
+            a specific URL into the browser, and if this URL path matches any 'route'
+            inside the router file, the user will be redirected to that particular route.
+          </p>
         </details>
 
         <details class="group">
           <summary class="flex cursor-pointer items-center justify-between rounded-lg bg-gray-50 p-4">
-            <h5 class="font-medium text-gray-900">question 2</h5>
+            <h5 class="font-medium text-gray-900">How does context Api Work?</h5>
 
             <svg
               class="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180"
@@ -89,12 +99,20 @@ const Blog = () => {
             </svg>
           </summary>
 
-          <p class="mt-4 px-4 leading-relaxed text-gray-700">answer 2</p>
+          <p class="mt-4 px-4 leading-relaxed text-gray-700">
+            The React Context API is a way for a React app to effectively produce global
+            variables that can be passed around. This is the alternative to "prop
+            drilling" or moving props from grandparent to child to parent, and so on.
+            Context is also touted as an easier, lighter approach to state management
+            using Redux.Context is a built-in API introduced in ​​React 16.3. It makes it
+            possible to pass data from parent to children nested deep down the component
+            tree directly, instead of passing it down through a chain of props
+          </p>
         </details>
 
         <details class="group">
           <summary class="flex cursor-pointer items-center justify-between rounded-lg bg-gray-50 p-4">
-            <h5 class="font-medium text-gray-900">question 3</h5>
+            <h5 class="font-medium text-gray-900"> Describe useref in your own words.</h5>
 
             <svg
               class="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180"
@@ -112,7 +130,22 @@ const Blog = () => {
             </svg>
           </summary>
 
-          <p class="mt-4 px-4 leading-relaxed text-gray-700">answer 3</p>
+          <p class="mt-4 px-4 leading-relaxed text-gray-700">
+            The useRef is a hook that allows to directly create a reference to the DOM
+            element in the functional component.
+            <br />
+            <small className="font-bold">
+              Syntax: const refContainer = useRef(initialValue);
+            </small>
+            The useRef returns a mutable ref object. This object has a property called
+            .current. The value is persisted in the refContainer.current property. These
+            values are accessed from the current property of the returned object. The
+            .current property could be initialised to the passed argument initialValue
+            e.g. useRef(initialValue). The object can persist a value for a full lifetime
+            of the component. . useRef can be used to store data values just like
+            useState, but the difference is that when that value changes, it doesn't cause
+            a re-render.
+          </p>
         </details>
       </div>
     </div>
