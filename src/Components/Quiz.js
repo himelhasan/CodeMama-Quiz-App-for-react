@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Quiz = ({ eachQuiz }) => {
   const { id, logo, name, total } = eachQuiz;
-  console.log(eachQuiz);
+
   return (
     <div>
       <Link
@@ -18,7 +18,7 @@ const Quiz = ({ eachQuiz }) => {
               {name ? name : "Random Quiz"}
             </h5>
 
-            <p className="mt-1 text-xs font-medium text-gray-600">By John Doe</p>
+            <p className="mt-1 text-xs font-medium text-gray-600">By {name} Hero</p>
           </div>
 
           <div className="ml-3  flex-shrink-0 sm:block">
@@ -28,13 +28,6 @@ const Quiz = ({ eachQuiz }) => {
               className="h-16 w-16 rounded-lg object-cover shadow-sm"
             />
           </div>
-        </div>
-
-        <div className="mt-4 sm:pr-8">
-          <p className="text-sm text-gray-500">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum
-            provident a, ipsa maiores deleniti consectetur nobis et eaque.
-          </p>
         </div>
 
         <dl className="mt-6 flex">
