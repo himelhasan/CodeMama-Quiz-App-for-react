@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Quiz from "./Quiz";
 import { QuizContext } from "../Layout/Main";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const quiz = useContext(QuizContext);
@@ -27,15 +28,16 @@ const Home = () => {
             <div className="flex flex-col items-center justify-between xl:flex-row">
               <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
                 <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-                  The quick, brown fox <br className="hidden md:block" />
-                  jumps over a lazy dog
+                  Learn to design and build
+                  <br className="hidden md:block" />
+                  professional website
                 </h2>
                 <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudan, totam rem aperiam, eaque ipsa quae.
+                  CodeMAMA Assessment is the industry standard for making great IT hiring
+                  decisions based on data, faster than ever
                 </p>
-                <a
-                  href="/"
+                <Link
+                  to="topics"
                   aria-label=""
                   className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
                 >
@@ -47,7 +49,7 @@ const Home = () => {
                   >
                     <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
                   </svg>
-                </a>
+                </Link>
               </div>
               <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
                 <div className="bg-white rounded shadow-2xl p-7 sm:p-10">
@@ -117,7 +119,7 @@ const Home = () => {
       </div>
       {/* quiz */}
 
-      <h2 className="text-3xl text-center pt-10">Quiz length: {quizData.length}</h2>
+      <h2 className="text-3xl text-center pt-10">Select Your Quiz</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 w-4/5 mx-auto py-5">
         {quizData.map((eachQuiz) => (
           <Quiz key={eachQuiz.id} eachQuiz={eachQuiz}></Quiz>

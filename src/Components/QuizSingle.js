@@ -125,22 +125,9 @@ const QuizSingle = () => {
             setCorrectAns={setCorrectAns}
             setWrong={setWrong}
             wrong={wrong}
-            // answerHandler={answerHandler}
           ></QuizCard>
         ))}
       </div>
-      <ToastContainer
-        position="top-center"
-        autoClose={500}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
     </div>
   );
 };

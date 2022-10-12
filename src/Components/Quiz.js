@@ -8,7 +8,7 @@ const Quiz = ({ eachQuiz }) => {
     <div>
       <Link
         to={`/quiz/${id}`}
-        className="relative block overflow-hidden rounded-lg border border-gray-100 p-8 m-5 bg-slate-200"
+        className="relative block overflow-hidden rounded-lg border border-gray-100 p-8 m-5 bg-slate-100"
       >
         <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
 

@@ -6,12 +6,14 @@ import Topics from "../Components/Topics";
 import Main from "../Layout/Main";
 import quizTopicLoader from "./dataLoader";
 import QuizSingle from "../Components/QuizSingle";
+import ErrorPage from "../Components/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     loader: quizTopicLoader,
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       { path: "/", element: <Home></Home> },
       { path: "topics", element: <Topics></Topics> },

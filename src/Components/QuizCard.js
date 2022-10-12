@@ -4,13 +4,17 @@ import QuizOption from "./QuizOption";
 
 const QuizCard = ({ quizSingle, correctAns, setCorrectAns, setWrong, wrong }) => {
   const { correctAnswer, options, question } = quizSingle;
-
+  // console.log("correctAnswer", correctAnswer);
   const [isVisible, setIsVisible] = useState(true);
-  const answerHandler = (e) => {
-    if (e.target.outerText === correctAnswer) {
+  const answerHandler = (event) => {
+    if (event.currentTarget.innerText.toLowerCase() == correctAnswer.toLowerCase()) {
+      console.log(event.currentTarget.innerText);
+      console.log(correctAnswer);
       toast.success("Correct Answer!");
       setCorrectAns(correctAns + 1);
     } else {
+      console.log(event.currentTarget.innerText);
+      console.log(correctAnswer.toLowerCase());
       setWrong(wrong + 1);
       toast.error("Wrong Answer");
     }
