@@ -40,12 +40,14 @@ export const Footer = () => {
             </a>
             <div className="mt-4 lg:max-w-sm">
               <p className="text-sm text-deep-purple-50">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                doloremque laudantium, totam rem aperiam.
+                At CodeMama, we help brands treat people like people with
+                thoughtfully-designed tools that turn digital interactions into lasting
+                personal connections.
               </p>
               <p className="mt-4 text-sm text-deep-purple-50">
-                Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo.
+                Because what do customers, prospects, users, leads, recruits, and
+                employees (the list goes on) all have in common? They’re all people. And
+                people are essential to growth.
               </p>
             </div>
           </div>
